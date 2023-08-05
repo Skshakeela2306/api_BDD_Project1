@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="7" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="13.708">
+<testcase classname="Title of your feature" name="Title of your scenario" time="0.002">
+<system-out><![CDATA[Given I want to take a value................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Title of your feature" name="Title of your scenario outline" time="0.001">
+<system-out><![CDATA[Given I want to write a value...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="get user posts" name="get all posts" time="0.05">
+<system-out><![CDATA[Given uri of rest api in "DEV" environment..................................passed
+And define HTTP request.....................................................passed
+When submit request via HTTP GET method.....................................passed
+Then status code is 200 and content type is "application/json"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="get user posts" name="get specific post" time="0.046">
+<system-out><![CDATA[Given uri of rest api in "DEV" environment..................................passed
+And define HTTP request.....................................................passed
+When submit request for id "10" via GET method..............................passed
+Then status code is "200" and id is "10" in json response body..............passed
+]]></system-out>
+</testcase>
+<testcase classname="get posts and posts creation" name="get secific post in data driven" time="0.043">
+<system-out><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request for id "10" via GET method..............................passed
+Then status code is "200" as per "valid" in json response body..............passed
+]]></system-out>
+</testcase>
+<testcase classname="get posts and posts creation" name="get secific post in data driven 2" time="0.497">
+<system-out><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request for id "101" via GET method.............................passed
+Then status code is "404" as per "invalid" in json response body............passed
+]]></system-out>
+</testcase>
+<testcase classname="get posts and posts creation" name="get secific post in data driven 3" time="0.046">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request for id "" via GET method................................passed
+Then status code is "400" as per "blank" in json response body..............failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at gluecode.StepDefs2.method1(StepDefs2.java:43)
+	at ✽.status code is "400" as per "blank" in json response body(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="get posts and posts creation" name="create a new post" time="0.506">
+<system-out><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via POST with:..........................................passed
+Then status code is "201" as per "unique" and content type is "application/json".passed
+]]></system-out>
+</testcase>
+<testcase classname="get posts and posts creation" name="create a new post 2" time="0.534">
+<system-out><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via POST with:..........................................passed
+Then status code is "201" as per "unique" and content type is "application/json".passed
+]]></system-out>
+</testcase>
+<testcase classname="get posts and posts creation" name="create a new post 3" time="0.515">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via POST with:..........................................passed
+Then status code is "200" as per "duplicate" and content type is "application/json".failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is "200" as per "duplicate" and content type is "application/json"(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+]]></failure>
+</testcase>
+<testcase classname="get posts and posts creation" name="create a new post 4" time="0.587">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via POST with:..........................................passed
+Then status code is "400" as per "wrong" and content type is "application/json".failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at gluecode.StepDefs2.method3(StepDefs2.java:88)
+	at ✽.status code is "400" as per "wrong" and content type is "application/json"(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature2.feature:27)
+]]></failure>
+</testcase>
+<testcase classname="posts creation" name="_2" time="1.552">
+<failure message="The following asserts failed:&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+Then validate that restful service with content type as "application/json"..failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at gluecode.StepDefs3.method1(StepDefs3.java:77)
+	at ✽.validate that restful service with content type as "application/json"(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature3.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="posts deletion" name="delete an existing post" time="0.517">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request for id 100 via DELETE method............................passed
+Then status code is 204.....................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at gluecode.StepDefs4.method2(StepDefs4.java:40)
+	at ✽.status code is 204(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="posts deletion" name="delete posts" time="5.178">
+<failure message="The following asserts failed:&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via DELETE to service by taking data from text file.....passed
+Then validate response as per data in text file.............................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at gluecode.StepDefs4.method13(StepDefs4.java:93)
+	at ✽.validate response as per data in text file(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature4.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="posts updation" name="update an existing post" time="0.521">
+<system-out><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request for id 100 via PUT method...............................passed
+Then status code is 200 and content type is "application/json"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="posts updation" name="update posts" time="2.917">
+<failure message="The following asserts failed:&#10;&#9;expected [true] but found [false],&#10;&#9;expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given uri of rest api in "QA" environment...................................passed
+And define HTTP request.....................................................passed
+When submit request via PUT to service by taking data from excel file.......passed
+Then validate response as per data in excel file............................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at gluecode.StepDefs5.method3(StepDefs5.java:112)
+	at ✽.validate response as per data in excel file(file:///E:/batch259/org.magnitia.restassured-BDDcucumber-pico-testng/src/test/resources/features/feature5.feature:17)
+]]></failure>
+</testcase>
+</testsuite>

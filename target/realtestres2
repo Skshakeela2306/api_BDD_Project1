@@ -1,0 +1,762 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 607000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 127000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "define HTTP request",
+            "match": {
+              "location": "gluecode.Stepdef1.method4()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-10T10:50:10.242Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "get all posts",
+        "description": "",
+        "id": "get-employees-details;get-all-posts",
+        "after": [
+          {
+            "output": [
+              "get all posts is PASSED"
+            ],
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1942000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "submit request via get method to Restfull service",
+            "match": {
+              "location": "gluecode.Stepdef1.method5()"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Test passed"
+            ],
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "status code is \"200\" and content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 41
+                }
+              ],
+              "location": "gluecode.Stepdef1.method6(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "define HTTP request",
+            "match": {
+              "location": "gluecode.Stepdef1.method4()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-10T10:50:12.980Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "get specific post",
+        "description": "",
+        "id": "get-employees-details;get-specific-post",
+        "after": [
+          {
+            "output": [
+              "get specific post is PASSED"
+            ],
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 778000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "submit request for id \"1\" via get method to Restfull service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 22
+                }
+              ],
+              "location": "gluecode.Stepdef1.method7(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Test passed"
+            ],
+            "result": {
+              "duration": 440000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code is \"200\" and id is \"1\" in json response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 31
+                }
+              ],
+              "location": "gluecode.Stepdef1.method8(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "get employees details",
+    "description": "",
+    "id": "get-employees-details",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/feature1.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-10T10:50:14.209Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "create a new post",
+        "description": "",
+        "id": "posts-creation;create-a-new-post;;2",
+        "after": [
+          {
+            "output": [
+              "create a new post is PASSED"
+            ],
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "define HTTP request",
+            "match": {
+              "location": "gluecode.Stepdef1.method4()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 951000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "submit request via post with \"10\",\"101\",\"wishes\", and \"all the best Rahul gandhi\" to service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"101\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"wishes\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"all the best Rahul gandhi\"",
+                  "offset": 54
+                }
+              ],
+              "location": "gluecode.Stepdef2.method9(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Test passed for criteria unique"
+            ],
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status code is \"201\" as per \"unique\" and content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"201\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"unique\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 57
+                }
+              ],
+              "location": "gluecode.Stepdef2.method10(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-10T10:50:15.169Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "create a new post",
+        "description": "",
+        "id": "posts-creation;create-a-new-post;;3",
+        "after": [
+          {
+            "output": [
+              "create a new post is PASSED"
+            ],
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "define HTTP request",
+            "match": {
+              "location": "gluecode.Stepdef1.method4()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 922000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "submit request via post with \"10\",\"102\",\"wishes\", and \"do singing in haven---Mr.Balu\" to service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"102\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"wishes\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"do singing in haven---Mr.Balu\"",
+                  "offset": 54
+                }
+              ],
+              "location": "gluecode.Stepdef2.method9(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Test passed for criteria unique"
+            ],
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status code is \"201\" as per \"unique\" and content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"201\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"unique\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 57
+                }
+              ],
+              "location": "gluecode.Stepdef2.method10(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-10T10:50:16.098Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "create a new post",
+        "description": "",
+        "id": "posts-creation;create-a-new-post;;4",
+        "after": [
+          {
+            "output": [
+              "create a new post is FAILED"
+            ],
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "define HTTP request",
+            "match": {
+              "location": "gluecode.Stepdef1.method4()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 898000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "submit request via post with \"10\",\"102\",\"wishes\", and \"do singing in haven---Mr.Balu\" to service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"102\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"wishes\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"do singing in haven---Mr.Balu\"",
+                  "offset": 54
+                }
+              ],
+              "location": "gluecode.Stepdef2.method9(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Test failed for criteria duplicate"
+            ],
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat gluecode.Stepdef2.method10(Stepdef2.java:52)\r\n\tat ✽.status code is \"200\" as per \"duplicate\" and content type is \"application/json\"(file:///E:/apibatch3/81org.magnitia.ra-bdd-pico-testng/src/test/resources/features/feature2.feature:8)\r\n",
+              "duration": 1000000,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "status code is \"200\" as per \"duplicate\" and content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"duplicate\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 60
+                }
+              ],
+              "location": "gluecode.Stepdef2.method10(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "posts creation",
+    "description": "",
+    "id": "posts-creation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/feature2.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-10T10:50:17.005Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method1(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "",
+        "description": "",
+        "id": "create-users;",
+        "after": [
+          {
+            "output": [
+              " is FAILED"
+            ],
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "gluecode.Shared.method2(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "register end point like \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 24
+                }
+              ],
+              "location": "gluecode.Stepdef1.method3(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "Test passed for criteria unique",
+              "Test passed for criteria unique",
+              "Test failed for criteria duplicate"
+            ],
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat gluecode.Stepdef2.method11(Stepdef2.java:86)\r\n\tat ✽.validate that restful service(file:///E:/apibatch3/81org.magnitia.ra-bdd-pico-testng/src/test/resources/features/feature3.feature:4)\r\n",
+              "duration": 2824000000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "validate that restful service",
+            "match": {
+              "location": "gluecode.Stepdef2.method11(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "uid",
+                  "id",
+                  "title",
+                  "body",
+                  "criteria",
+                  "sc"
+                ]
+              },
+              {
+                "cells": [
+                  "10",
+                  "101",
+                  "wishes",
+                  "all the best Rahul gandhi",
+                  "unique",
+                  "201"
+                ]
+              },
+              {
+                "cells": [
+                  "10",
+                  "102",
+                  "wishes",
+                  "do singing in haven---Mr.Balu",
+                  "unique",
+                  "201"
+                ]
+              },
+              {
+                "cells": [
+                  "10",
+                  "102",
+                  "wishes",
+                  "do singing in haven---Mr.Balu",
+                  "duplicate",
+                  "200"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "create users",
+    "description": "",
+    "id": "create-users",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/feature3.feature",
+    "tags": []
+  }
+]
